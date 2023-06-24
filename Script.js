@@ -1,22 +1,17 @@
-let s="";
-let buttons=document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=>{
-    button.addEventListener('click',(e)=>{
-        if(e.target.innerHTML=="="){
-            s=eval(s);
-            document.querySelector('input').value=string;
-        }
-        else if(e.target.innerHTML=="C"){
-            s="";
-            document.querySelector('input').value=string;
-        }
-        else{
-            console.log(e.target)
-            s=s+e.target.innerHTML;
-            document.querySelector('input').value=s;
-        }
-        console.log(e.target)
-        s=s+e.target.innerHTML;
-        document.querySelector('input')=s;
-    })
-})
+let string=""; 
+ let buttons= document.querySelectorAll('button'); 
+ let arr= Array.from(buttons); 
+ arr.forEach((button) => { 
+     button.addEventListener('click', (e)=>{ 
+         if(e.target.innerHTML=='='){ 
+             string=eval(string); 
+             document.querySelector('input').value=string;} 
+         else if(e.target.innerHTML=='AC'){ 
+             string=""; 
+             document.querySelector('input').value=string; 
+         } 
+         else{ 
+             string+=e.target.innerHTML; 
+             document.querySelector('input').value=string; 
+         } 
+  });
